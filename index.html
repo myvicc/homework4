@@ -6,12 +6,17 @@
 </head>
 <body>
 <script>
-    const number1 = +prompt("Enter number1");
-    const number2 = +prompt("Enter number2");
-    const number3 = +prompt("Enter number3");
+    const number1 = prompt("Enter number1");
+    const number2 = prompt("Enter number2");
+    const number3 = prompt("Enter number3");
 
-    alert((number1 + number2 + number3) / 3);
-
+    if (number1 === null || number2 === null || number3 === null) {
+        alert("Incorrect data, try again");
+    } else if (isNaN(+number1) || isNaN(+number2) || isNaN(+number3)) {
+        alert("Incorrect data, try again");
+    } else {
+        alert((+number1 + +number2 + +number3) / 3);
+    }
 </script>
 </body>
 </html>
